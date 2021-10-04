@@ -7,7 +7,7 @@ for use on GitHub Pages.
 ## Usage
 
 See the [Just the Docs](https://pmarsceill.github.io/just-the-docs/) page for information
-on using the parent theme. However, please note that just-the-docs-mdi is intended exclusively 
+on using the parent theme. However, please note that just-the-docs-mdi is intended 
 for use on GitHub Pages.
 
 More generally, create a new documentation site using the 
