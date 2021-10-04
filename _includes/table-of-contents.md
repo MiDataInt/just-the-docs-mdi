@@ -1,4 +1,4 @@
-<-- see Just the Docs to understand this markdown -->
+<!-- see Just the Docs to understand this markdown -->
 # {{ page.title }}
 {: .no_toc }
 
