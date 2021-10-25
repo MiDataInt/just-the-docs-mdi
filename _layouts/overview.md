@@ -1,11 +1,12 @@
 ---
 layout: default
-nav_order: 0
 ---
 
 ## {{ site.title }}
 
 {% include mdi-project-overview.md %}
+
+just to be clear, this is from the overview layout
 
 {{ content }}
 
