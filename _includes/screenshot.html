@@ -1,0 +1,7 @@
+{% assign url = "/assets/images/screenshots/" | append: include.image | relative_url %}
+<div style="width: 30%; display: inline-block; padding: 0 0.5em;">
+    <a href="{{ url }}">
+        <img src="{{ url }}" width="100%" height="200" style="object-fit: cover;">
+    </a>
+    <p style="margin: 0 0.5em; font-size: 0.9em;" >{{ include.caption}}</p>
+</div>
