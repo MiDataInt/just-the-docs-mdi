@@ -1,4 +1,4 @@
-{% if site.docs %}
+{%- if site.docs -%}
     {%- assign site_pages = site.docs -%}
 {%- else -%}
     {%- assign site_pages = site.html_pages -%}
