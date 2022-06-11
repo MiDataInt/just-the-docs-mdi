@@ -160,7 +160,7 @@ layout: table_wrappers
         {% if footer_custom != "" or site.last_edit_timestamp or site.gh_edit_link %}
           <hr>
           <footer>
-            <p style="display: flex;">
+            <div style="display: flex;">
               {%- include prev_next/set_prev_next.md -%}
               <div style="flex: 1; display: flex; justify-content: flex-start;">
                 {% if prev_url != "" %}
@@ -177,7 +177,7 @@ layout: table_wrappers
                 <a href="{{ next_url }}" id="next-page">Next</a>
                 {% endif %}
               </div>
-            </p>
+            </div>
             
             {{ footer_custom }}
 
