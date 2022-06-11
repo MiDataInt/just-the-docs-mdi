@@ -15,6 +15,3 @@
         {%- assign next_url = query_page.url | relative_url -%}
     {%- endif -%}
 {%- endfor -%}
-
-<{{prev_url}}>  
-<{{next_url}}>
