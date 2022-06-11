@@ -2,7 +2,7 @@
 {%- include prev_next/set_site_order.md -%}
 {%- assign page_site_order = site_order -%}
 {%- assign prev_site_order = -1 -%}
-{%- assign next_site_order = 1000000 -%}
+{%- assign next_site_order = 1000000000 -%}
 {%- assign prev_url = "" -%}
 {%- assign next_url = "" -%}
 {%- for query_page in site.html_pages -%}
