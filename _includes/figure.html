@@ -1,0 +1,13 @@
+{% assign url = "/assets/images/" | append: include.file | relative_url %}
+
+{% capture caption %}
+<p>
+    <strong>{{ include.title }}</strong>
+    {{ include.caption }}
+</p>
+{% endcapture %}
+
+<div style="padding: 15px; font-size: 0.925em;">
+    <img src="{{ url }}" style="max-width: 100%; height: auto; display: block; margin: auto;">
+    <div style="margin-top: 5px;">{{ caption }}</div>
+</div>
