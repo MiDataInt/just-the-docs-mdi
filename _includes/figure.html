@@ -7,15 +7,17 @@
 </p>
 {%- endcapture -%}
 
-{%- capture width -%}
-{%- if include.width -%}  "width: {{ include.width }}; " {%- else -%} "" {%- endif -%}
-{%- endcapture -%}
-
-{%- capture border -%}
-{%- if include.border -%} "border: 1px solid #ddd; "     {%- else -%} "" {%- endif -%}
-{%- endcapture -%}
-
 {%- assign style = "max-width: 100%; height: auto; display: block; margin: auto; padding: 0 10px; " -%}
+
+{%- assign width = "" -%}
+{%- if include.width -%} 
+{%- assign width = "width: {{ include.width }}; " -%} 
+{%- endif -%}
+
+{%- assign border = "" -%}
+{%- if include.border -%} 
+{%- assign border = "border: 1px solid #ddd; " -%} 
+{%- endif -%}
 
 <div style="font-size: 0.925em;">
     <img src="{{ url }}" style="{{ style | append: width | append: border }}">
