@@ -8,21 +8,16 @@
 {%- endcapture -%}
 
 {%- capture width -%}
-{%- if include.width -%} "width: {{ include.width }};" {%- else -%} "" {%- endif -%}
+{%- if include.width -%}  "width: {{ include.width }}; " {%- else -%} "" {%- endif -%}
 {%- endcapture -%}
 
 {%- capture border -%}
-{%- if include.border -%} "border: 1px solid #ddd;" {%- else -%} "" {%- endif -%}
+{%- if include.border -%} "border: 1px solid #ddd; "     {%- else -%} "" {%- endif -%}
 {%- endcapture -%}
 
+{%- assign style = "max-width: 100%; height: auto; display: block; margin: auto; padding: 0 10px; " -%}
+
 <div style="font-size: 0.925em;">
-    <img src="{{ url }}" 
-         style="max-width: 100%; 
-                {{ width }}
-                height: auto; 
-                display: block; 
-                margin: auto; 
-                padding: 0 10px; 
-                {{ border}}">
+    <img src="{{ url }}" style="{{ style | append: width | append: border }}">
     {{ caption }}
 </div>
