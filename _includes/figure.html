@@ -11,7 +11,7 @@
 
 {%- assign width = "" -%}
 {%- if include.width -%} 
-{%- assign width = "width: {{ include.width }}; " -%} 
+{%- assign width = "width: " | append: include.width | append: "; " -%} 
 {%- endif -%}
 
 {%- assign border = "" -%}
