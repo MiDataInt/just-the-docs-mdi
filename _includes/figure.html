@@ -7,7 +7,7 @@
 </p>
 {%- endcapture -%}
 
-{%- assign style = "max-width: 100%; height: auto; display: block; margin: auto; padding: 0 10px; " -%}
+{%- assign style = "max-width: 100%; height: auto; " -%}
 
 {%- assign width = "" -%}
 {%- if include.width -%} 
@@ -19,7 +19,7 @@
 {%- assign border = "border: 1px solid #ddd; " -%} 
 {%- endif -%}
 
-<div style="font-size: 0.925em;">
+<div style="font-size: 0.925em; text-align: center; padding: 0 10px;">
     <img src="{{ url }}" style="{{ style | append: width | append: border }}">
     {{ caption }}
 </div>
