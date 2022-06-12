@@ -1,13 +1,28 @@
-{% assign url = "/assets/images/" | append: include.file | relative_url %}
+{%- assign url = "/assets/images/" | append: include.file | relative_url -%}
 
-{% capture caption %}
+{%- capture caption -%}
 <p style="margin-top: 5px; text-align: center;">
     <strong>{{ include.title }}</strong>
     {{ include.caption }}
 </p>
-{% endcapture %}
+{%- endcapture -%}
+
+{%- capture width -%}
+{%- if include.width -%} "width: {{ include.width }};" {%- else -%} "" {%- endif -%}
+{%- endcapture -%}
+
+{%- capture border -%}
+{%- if include.border -%} "border: 1px solid #ddd;" {%- else -%} "" {%- endif -%}
+{%- endcapture -%}
 
 <div style="font-size: 0.925em;">
-    <img src="{{ url }}" style="max-width: 100%; height: auto; display: block; margin: auto;">
+    <img src="{{ url }}" 
+         style="max-width: 100%; 
+                {{ width }}
+                height: auto; 
+                display: block; 
+                margin: auto; 
+                padding: 0 10px; 
+                {{ border}}">
     {{ caption }}
 </div>

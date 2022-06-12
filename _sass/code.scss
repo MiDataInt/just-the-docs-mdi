@@ -52,7 +52,8 @@ div.highlighter-rouge {
   overflow-x: auto;
   background-color: $code-background-color;
   border-radius: $border-radius;
-  box-shadow: none;
+  box-shadow: 2px 2px 5px #888;              // MDI CHANGE
+  border: 1px solid #ddd;                    // MDI CHANGE
   -webkit-overflow-scrolling: touch;
 
   div.highlight,
