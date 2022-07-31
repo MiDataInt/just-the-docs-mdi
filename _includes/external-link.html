@@ -4,4 +4,5 @@ in which 'target' is set to '_blank', which allows
 external links clicked in mdi-apps-launcher to be diverted
 to the default system web browser.
 {%- endcomment -%}
-<a href="{{ include.href | relative_url }}" class="{{include.class}}" target="_blank">{{ include.text }}</a>
+{%- capture class -%}{%- if include.class -%}class="{{include.class}}"{%- else -%} {%- endif -%}{%- endcapture -%}
+<a href="{{ include.href | relative_url }}" {{ class }} target="_blank">{{ include.text }}</a>
