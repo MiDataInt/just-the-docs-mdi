@@ -1,0 +1,25 @@
+{%- assign url = "/assets/images/" | append: include.file | relative_url -%}
+
+{%- capture caption -%}
+<p style="margin-top: 5px; text-align: center;">
+    <strong>{{ include.title }}</strong>
+    {{ include.caption }}
+</p>
+{%- endcapture -%}
+
+{%- assign style = "max-width: 100%; height: auto; " -%}
+
+{%- assign width = "" -%}
+{%- if include.width -%} 
+{%- assign width = "width: " | append: include.width | append: "; " -%} 
+{%- endif -%}
+
+{%- assign border = "" -%}
+{%- if include.border -%} 
+{%- assign border = "border: 1px solid #ddd; " -%} 
+{%- endif -%}
+
+<div style="font-size: 0.925em; text-align: center; padding: 0 10px;">
+    <img src="{{ url }}" style="{{ style | append: width | append: border }}">
+    {{ caption }}
+</div>

@@ -9,6 +9,7 @@ code {
   background-color: $code-background-color;
   border: $border $border-color;
   border-radius: $border-radius;
+  color: #222;                    // MDI CHANGE
 }
 
 // Avoid appearance of dark border around visited code links in Safari
@@ -51,7 +52,8 @@ div.highlighter-rouge {
   overflow-x: auto;
   background-color: $code-background-color;
   border-radius: $border-radius;
-  box-shadow: none;
+  box-shadow: 2px 2px 5px #888;              // MDI CHANGE
+  border: 1px solid #ddd;                    // MDI CHANGE
   -webkit-overflow-scrolling: touch;
 
   div.highlight,
@@ -125,7 +127,7 @@ figure.highlight {
   color: #93a1a1;
 } // literal //
 .highlight .n {
-  color: #93a1a1;
+  color: #222; //#93a1a1; // MDI CHANGE
 } // name //
 .highlight .o {
   color: #859900;
@@ -208,7 +210,7 @@ figure.highlight {
   color: #2aa198;
 } // literal.string //
 .highlight .na {
-  color: #555;
+  color: #222; //#555; // MDI CHANGE
 } // name.attribute //
 .highlight .nb {
   color: #b58900;
@@ -232,13 +234,13 @@ figure.highlight {
   color: #268bd2;
 } // name.function //
 .highlight .nl {
-  color: #555;
+  color: #222; //#555; // MDI CHANGE
 } // name.label //
 .highlight .nn {
   color: #93a1a1;
 } // name.namespace //
 .highlight .nx {
-  color: #555;
+  color: #222; //#555; // MDI CHANGE
 } // name.other //
 .highlight .py {
   color: #93a1a1;
