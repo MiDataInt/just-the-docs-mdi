@@ -66,7 +66,7 @@ layout: table_wrappers
       {% endif %}
     </nav>
     <footer class="site-footer">
-      Part of the <a href="https://github.com/MiDataInt">Michigan Data Interface</a><br>
+      Part of the <a href="https://github.com/MiDataInt" target="_blank">Michigan Data Interface</a><br>
       Content license 
       <a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
         CC BY-NC 4.0
@@ -90,11 +90,7 @@ layout: table_wrappers
           <ul class="aux-nav-list">
             {% for link in site.aux_links %}
               <li class="aux-nav-list-item">
-                <a href="{{ link.last }}" class="site-button"
-                  {% if site.aux_links_new_tab %}
-                  target="_blank" rel="noopener noreferrer"
-                  {% endif %}
-                >
+                <a href="{{ link.last }}" class="site-button" target="_blank">
                   {{ link.first }}
                 </a>
               </li>

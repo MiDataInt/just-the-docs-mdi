@@ -1,0 +1,7 @@
+{%- comment -%}
+The external-link element creates simple <a> url link
+in which 'target' is set to '_blank', which allows
+external links clicked in mdi-apps-launcher to be diverted
+to the default system web browser.
+{%- endcomment -%}
+<a href="{{ include.href | relative_url }}" class="{{include.class}}" target="_blank">{{ include.text }}</a>
