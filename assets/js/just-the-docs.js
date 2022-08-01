@@ -22,16 +22,35 @@ jtd.onReady = function(ready) {
 }
 
 // Show/hide mobile menu
+const jtdSiteOrigin = (new URL(window.location)).origin;
 
 function initNav() {
   jtd.addEvent(document, 'click', function(e){
     var target = e.target;
-    while (target && !(target.classList && target.classList.contains('nav-list-expander'))) {
-      target = target.parentNode;
-    }
-    if (target) {
+
+    // MDI addition to capture external web links into desktop app
+    if(window.mdiElectron && 
+      window.mdiElectron.frameworkToElectron &&
+      target.tagName.toLowerCase() === 'a' && 
+      target.href && 
+      target.href.startsWith("http") &&
+      !target.href.startsWith(jtdSiteOrigin)
+    ){
       e.preventDefault();
-      target.parentNode.classList.toggle('active');
+      window.mdiElectron.frameworkToElectron("externalLink", {
+        url: target.href,
+        target: "jtdExternalLink" // ignore any target claimed by the link
+      });
+    
+    // Just The Docs default code
+    } else {
+      while (target && !(target.classList && target.classList.contains('nav-list-expander'))) {
+        target = target.parentNode;
+      }
+      if (target) {
+        e.preventDefault();
+        target.parentNode.classList.toggle('active');
+      }      
     }
   });
 
