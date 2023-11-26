@@ -1,0 +1,15 @@
+{%- assign url = "/assets/images/" | append: include.file | relative_url -%}
+
+{%- assign style = "max-width: 100%; height: auto; display: inline-block;" -%}
+
+{%- assign width = "" -%}
+{%- if include.width -%} 
+{%- assign width = "width: " | append: include.width | append: "; " -%} 
+{%- endif -%}
+
+{%- assign border = "" -%}
+{%- if include.border -%} 
+{%- assign border = "border: 1px solid #ddd; " -%} 
+{%- endif -%}
+
+<img src="{{ url }}" style="{{ style | append: width | append: border }}">
