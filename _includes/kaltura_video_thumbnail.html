@@ -2,7 +2,7 @@
 <div style="width: 30%; display: inline-block; padding: 0 0.5em;">
     <a 
         href="javascript:void(0);" 
-        onclick="$('#kaltura_player_wrapper').css('max-width', '{{ include.width }}px').css('display', 'block'); $('#kaltura_player').attr('width', '{{ include.width }}').attr('height', '{{ include.height }}').attr('src', '{{ include.src }}')"
+        onclick="var el = document.getElementById('kaltura_player_wrapper'); el.style.maxWidth = '{{ include.width }}px'; el.style.display = 'block'; el = document.getElementById('kaltura_player'); el.width = {{ include.width }}; el.height = {{ include.height }}; el.src = '{{ include.src }}';"
     >
         <img src="{{ image_url }}" width="100%" height="200" style="object-fit: cover;">
     </a>
