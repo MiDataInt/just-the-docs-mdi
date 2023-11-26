@@ -1,0 +1,10 @@
+{% assign image_url = "/assets/images/thumbnails/" | append: include.thumbnail | relative_url %}
+<div style="width: 30%; display: inline-block; padding: 0 0.5em;">
+    <a 
+        href="javascript:void(0);" 
+        onclick="$('#kaltura_player_wrapper').css('max-width', '{{ include.width }}px').css('display', 'block'); $('#kaltura_player').attr('width', '{{ include.width }}').attr('height', '{{ include.height }}').attr('src', '{{ include.src }}')"
+    >
+        <img src="{{ image_url }}" width="100%" height="200" style="object-fit: cover;">
+    </a>
+    <p style="margin: 0 0.5em; font-size: 0.9em;" >{{ include.caption }}</p>
+</div>
